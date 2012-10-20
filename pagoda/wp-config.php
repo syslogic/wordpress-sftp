@@ -89,6 +89,13 @@ define('FTP_BASE', '/home/'.$_SERVER['APP_NAME'].'/shared/');
 define('FTP_CONTENT_DIR', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/');
 define('FTP_PLUGIN_DIR ', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/plugins/');
 
+
+/* Override default file system method */
+if(is_admin()) {
+	add_filter('filesystem_method', create_function('$a', 'return "direct";' ));
+	define( 'FS_CHMOD_DIR', 0751 );
+}
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
