@@ -1,5 +1,7 @@
 web1:
   name: WordPress
+  php_extensions:
+    - ssh2
   shared_writable_dirs:
     - wp-content/themes/
     - wp-content/plugins/
