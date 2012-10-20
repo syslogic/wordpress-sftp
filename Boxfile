@@ -1,6 +1,7 @@
 web1:
   name: WordPress
   php_extensions:
+    - sockets
     - mysql
     - ssh2
   shared_writable_dirs:
