@@ -1,7 +1,5 @@
 web1:
   name: WordPress
-  php_extensions:
-    - mysql
   shared_writable_dirs:
     - wp-content/themes/
     - wp-content/plugins/
@@ -9,5 +7,8 @@ web1:
   after_build:
     - "mv pagoda/wp-config.php wp-config.php"
     - "rm -R pagoda"
+  after_deploy:
+    - "mkdir wp-content/themes; cp -rv pagoda/wp-content/themes/* wp-content/themes/"
+    - "mkdir wp-content/plugins; cp -rv pagoda/wp-content/plugins/* wp-content/plugins/"
 db1:
   name: WordPress
