@@ -78,9 +78,13 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
 
 define('FS_METHOD', 'ssh2');
+define('FTP_HOST', 'pagodabox.com');
 define('FTP_USER', $_SERVER['APP_NAME']);
 define('FTP_BASE', '/home/'.$_SERVER['APP_NAME'].'/shared/');
 define('FTP_CONTENT_DIR', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/');
