@@ -8,6 +8,7 @@ web1:
     - wp-content/themes/
     - wp-content/plugins/
     - wp-content/uploads/
+    - wp-content/upgrade/
   after_build:
     - "mv pagoda/wp-config.php wp-config.php"
   after_deploy:
