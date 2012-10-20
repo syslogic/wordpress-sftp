@@ -86,9 +86,9 @@ define('WP_DEBUG_DISPLAY', false);
 define('FS_METHOD', 'ssh2');
 define('FTP_HOST', 'pagodabox.com');
 define('FTP_USER', $_SERVER['APP_NAME']);
-define('FTP_BASE', '/home/'.$_SERVER['APP_NAME'].'/shared/');
-define('FTP_CONTENT_DIR', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/');
-define('FTP_PLUGIN_DIR ', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/plugins/');
+define('FTP_BASE', '/shared/');
+define('FTP_CONTENT_DIR', '/shared/wp-content/');
+define('FTP_PLUGIN_DIR ', '/shared/wp-content/plugins/');
 
 /* That's all, stop editing! Happy blogging. */
 
