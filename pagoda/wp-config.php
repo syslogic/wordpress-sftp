@@ -80,6 +80,11 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
+define('FS_METHOD', 'ssh2');
+define('FTP_BASE', '/home/'.$_SERVER['APP_NAME'].'/shared/');
+define('FTP_CONTENT_DIR', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/');
+define('FTP_PLUGIN_DIR ', '/home/'.$_SERVER['APP_NAME'].'/shared/wp-content/plugins/');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
