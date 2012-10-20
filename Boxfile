@@ -6,7 +6,6 @@ web1:
     - wp-content/uploads/
   after_build:
     - "mv pagoda/wp-config.php wp-config.php"
-    - "rm -R pagoda"
   after_deploy:
     - "mkdir wp-content/themes; cp -rv pagoda/wp-content/themes/* wp-content/themes/"
     - "mkdir wp-content/plugins; cp -rv pagoda/wp-content/plugins/* wp-content/plugins/"
