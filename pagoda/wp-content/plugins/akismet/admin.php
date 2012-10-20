@@ -3,12 +3,6 @@ add_action( 'admin_menu', 'akismet_admin_menu' );
 	
 akismet_admin_warnings();
 
-/* Override default file system method */
-if(is_admin()) {
-	add_filter('filesystem_method', create_function('$a', 'return "direct";' ));
-	define( 'FS_CHMOD_DIR', 0751 );
-}
-
 function akismet_admin_init() {
     global $wp_version;
     
